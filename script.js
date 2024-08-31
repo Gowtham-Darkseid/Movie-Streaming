@@ -16,12 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
         kravenVideo.style.display = 'none';
     });
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const prevButton = document.querySelector('button.prev');
     const nextButton = document.querySelector('button.next');
     const carousel = document.querySelector('.movie-carousel');
-
-    let scrollAmount = 0;
 
     nextButton.addEventListener('click', () => {
         carousel.scrollBy({
@@ -40,3 +39,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const prevButton1 = document.querySelector('button.prev1');
+    const nextButton1 = document.querySelector('button.next1'); // Ensure this is next1, not next2
+    const carousel1 = document.querySelector('.movie-carousel1');
+
+    if (prevButton1 && nextButton1 && carousel1) {
+        nextButton1.addEventListener('click', () => {
+            carousel1.scrollBy({
+                top: 0,
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+
+        prevButton1.addEventListener('click', () => {
+            carousel1.scrollBy({
+                top: 0,
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+    } else {
+        console.error('Carousel1 buttons or carousel1 not found!');
+    }
+});

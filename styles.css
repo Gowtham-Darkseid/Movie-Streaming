@@ -198,20 +198,35 @@ button {
     margin-right: 10px;
 }
 
+.bp{
+    color:#ffd900   ;
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: 400px;
+    font-size: 29px;
+    margin-right: 100px;
+}
+
+
 .movie-carousel-container {
+    background: rgba(0, 0, 0, 0.58);
+    box-shadow: 0 8px 32px 0 rgba(246, 251, 146, 0.09);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 10px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .movie-carousel {
     display: flex;
     overflow-x: hidden;
-    gap: 20px;
+    gap: 90px;
     scroll-behavior: smooth;
-    padding: 10px;
+    padding: 20px;
+    padding-top: 10px;
     scrollbar-width: none; /* For Firefox */
     width: 80%;
     transition: transform 0.3s ease-in-out; /* Animation effect */
@@ -222,13 +237,54 @@ button {
 }
 
 .movie-carousel img {
-    width: 200px; /* Increased image size */
+    width: 230px; /* Increased image size */
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
 }
 
-button.prev, button.next {
+
+
+/* Animation on hover */
+.movie-carousel img:hover {
+    transform: scale(1.2); /* Zoom effect */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
+}
+
+/* FOR NEXT SCROLL*/
+
+.movie-carousel1 {
+    display: flex;
+    overflow-x: hidden;
+    gap: 90px;
+    scroll-behavior: smooth;
+    padding: 20px;
+    padding-top: 10px;
+    scrollbar-width: none; /* For Firefox */
+    width: 80%;
+    transition: transform 0.3s ease-in-out; /* Animation effect */
+}
+
+.movie-carousel1::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.movie-carousel1 img {
+    width: 230px; /* Increased image size */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
+}
+
+
+/* Animation on hover */
+.movie-carousel1 img:hover {
+    transform: scale(1.2); /* Zoom effect */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
+}
+
+/* Scroll Button Styles */
+button.prev, button.next, button.prev1, button.next1 {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -239,6 +295,7 @@ button.prev, button.next {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 button.prev {
@@ -249,12 +306,98 @@ button.next {
     right: 10px;
 }
 
-/* Animation on hover */
-.movie-carousel img:hover {
-    transform: scale(1.2); /* Zoom effect */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
+button.prev1 {
+    left: 10px;
 }
 
+button.next1 {
+    right: 10px;
+}
 
+/* Hover Animation */
+button.prev:hover, button.next:hover, button.prev1:hover, button.next1:hover {
+    background-color: rgba(242, 255, 0, 0.875); /* Change background color */
+    color: black; /* Change text color */
+    transform: translateY(-50%) scale(1.1); /* Slightly increase size */
+    box-shadow: 0 0 15px rgba(255, 225, 0, 0.89); /* Add shadow */
+}
 
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 40px 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #ffd900;
+}
+
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd900;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
 
