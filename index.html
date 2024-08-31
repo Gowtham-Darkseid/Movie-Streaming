@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="Assets/livhast..png" alt="Livhast Logo">
+            </div>
+            <ul>
+                <li><a href="#">New Movie</a></li>
+                <li><a href="#">FM-Waves</a></li>
+                <li><a href="#">TV-Series</a></li>
+                <li><a href="#">Blog</a></li>
+                <li class="search-container">
+                    <a href="#" class="search-icon"></a>
+                    <input type="text" class="search-input" placeholder="Search">
+                </li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="login-btn">Login</button>
+                    <button class="signup-btn">Signup</button>
+                </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="featured-movie">
+            <div class="movie-info">
+                <span class="badge">NEW</span>
+                <h1>Kraven the Hunter </h1>
+                <div class="rating">
+                    <span>IMDB</span>
+                    <span>8.2 (12,827)</span>
+                </div>
+                <p class="description">
+                    Action/Sci-fi | 2024 | 1 hour 55 minutes
+                    <br>Some brief description goes here...
+                </p>
+                <button>Watch trailer</button>
+                <button>Watch now</button>
+            </div>
+            <video id="kraven-video" class="hover-video" >
+                <source src="Assets/trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        
+        <section class="movie-carousel-container">
+            <button class="prev">&lt;</button> <div class="movie-carousel">
+                <img src="Assets/Rectangle 6.png" alt="Movie 1">
+                <img src="Assets/Rectangle 8.png" alt="Movie 2">
+                <img src="Assets/Rectangle 6.png" alt="Movie 3">
+                </div>
+            <button class="next">&gt;</button> </section>
+            
+    </main> 
+    <script src="script.js"></script> </body>
+</html>
