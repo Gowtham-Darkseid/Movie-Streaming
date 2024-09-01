@@ -6,6 +6,6 @@ https://livhast.netlify.app
 
 SCREENSHOTS 
 ____________________________________________________________
-![Screenshot from 2024-08-31 19-11-26](https://github.com/user-attachments/assets/76db2037-4e0f-4d27-9380-77b0fc841683)
 
 
+![screencapture-file-home-darkseid-Projects-streaming-index-html-2024-09-01-11_48_33](https://github.com/user-attachments/assets/4a0b3b42-423e-4e3b-89e0-ad5b92a5603c)
