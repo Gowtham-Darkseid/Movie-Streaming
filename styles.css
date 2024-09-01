@@ -41,6 +41,8 @@ header {
     height: auto;
 }
 
+
+
 nav {
     display: flex;
     align-items: center;
@@ -321,6 +323,7 @@ button.prev:hover, button.next:hover, button.prev1:hover, button.next1:hover {
     transform: translateY(-50%) scale(1.1); /* Slightly increase size */
     box-shadow: 0 0 15px rgba(255, 225, 0, 0.89); /* Add shadow */
 }
+
 
 /* Footer Styles */
 footer {
