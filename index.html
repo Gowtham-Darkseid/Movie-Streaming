@@ -11,21 +11,29 @@
     <link rel="icon" href="Assets/52 (1).ico" type="image/x-icon">
 </head>
 <body>
+    <div class="scroll-container">
     <header>
         <nav>
-            <div class="logo-container">
+            <!-- <div class="logo-container">
                 <img src="Assets/livhast..png" alt="Livhast Logo">
-            </div>
+            </div> -->
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" fill="rgb(245, 245, 220)"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+                <li><a href="#">New Movies</a></li>
+                <li><a href="#">FM-Waves</a></li>
+                <li><a href="#">TV-Series</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><button class="login-btn">Login</button></li>
+                <li><button class="signup-btn">Signup</button></li> 
+              </ul>
             <ul>
+                <li><a href="index.html">Livhast.</a></li>
                 <li><a href="#">New Movie</a></li>
                 <li><a href="#">FM-Waves</a></li>
                 <li><a href="#">TV-Series</a></li>
                 <li><a href="#">Blog</a></li>
-                <li class="search-container">
-                    <a href="#" class="search-icon"></a>
-                    <input type="text" class="search-input" placeholder="Search">
-                </li>
-                </ul>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" fill="rgb(245, 245, 220white)"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
                 <div class="auth-buttons">
                     <button class="login-btn">Login</button>
                     <button class="signup-btn">Signup</button>
@@ -81,7 +89,7 @@
               <div></div>
     </main> 
     
-    <script src="script.js"></script> </body>
+    <script src="script.js"></script>
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -112,5 +120,6 @@
             <p>&copy; 2024 Livhast. All rights reserved.</p>
         </div>
     </footer>
-    
+    </div>
+    </body>
 </html>

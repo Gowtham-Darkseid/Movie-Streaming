@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const featuredMovie = document.querySelector('.featured-movie');
     const kravenVideo = document.getElementById('kraven-video');
@@ -64,3 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Carousel1 buttons or carousel1 not found!');
     }
 });
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
