@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const featuredMovie = document.querySelector('.featured-movie');
     const kravenVideo = document.getElementById('kraven-video');
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         kravenVideo.muted = false; // Ensure the video is not muted
         kravenVideo.play().catch(error => {
             console.error("Autoplay failed:", error);
-            // You can prompt the user to click to play with sound if autoplay fails
         });
     });
 
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nextButton.addEventListener('click', () => {
         carousel.scrollBy({
             top: 0,
-            left: 300, // Adjust this value to scroll more or less
+            left: 300, 
             behavior: 'smooth'
         });
     });
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     prevButton.addEventListener('click', () => {
         carousel.scrollBy({
             top: 0,
-            left: -300, // Adjust this value to scroll more or less
+            left: -300,
             behavior: 'smooth'
         });
     });
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const prevButton1 = document.querySelector('button.prev1');
-    const nextButton1 = document.querySelector('button.next1'); // Ensure this is next1, not next2
+    const nextButton1 = document.querySelector('button.next1');
     const carousel1 = document.querySelector('.movie-carousel1');
 
     if (prevButton1 && nextButton1 && carousel1) {
@@ -74,3 +72,4 @@ function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
   }
+
