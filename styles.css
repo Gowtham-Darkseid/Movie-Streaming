@@ -337,7 +337,7 @@ body {
     font-size: 14px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .reasons-to-join {
       margin-top: -20px; /* Reduce the negative margin */
       padding: 30px 10px; /* Adjust padding to fit smaller screens */
@@ -371,7 +371,7 @@ body {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 550px) {
     .trending-now {
         padding: 20px 0; /* Reduce padding for smaller screens */
         background: rgba(0, 0, 0, 0.8); /* Slightly less opaque for better readability on small screens */
@@ -398,7 +398,7 @@ body {
 }
 
   
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .shiny-button {
         margin-top: -100px; /* Adjust margin-top for better positioning */
         margin-left: 70%; /* Adjust margin-left for better fit */
