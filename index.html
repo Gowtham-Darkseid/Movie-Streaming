@@ -3,124 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livhast</title>
+    <title>Streaming Service Landing Page</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-    <link rel="icon" href="Assets/52 (1).ico" type="image/x-icon">
 </head>
 <body>
-    <div class="scroll-container">
-        <header>
-            <nav>
-                <!-- <div class="logo-container">
-                    <img src="Assets/livhast..png" alt="Livhast Logo">
-                </div> -->
-                <ul class="sidebar">
-                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" fill="rgb(245, 245, 220)"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-                    <li><a href="#">New Movies</a></li>
-                    <li><a href="#">FM-Waves</a></li>
-                    <li><a href="#">TV-Series</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><button class="login-btn">Login</button></li>
-                    <li><button class="signup-btn">Signup</button></li> 
-                  </ul>
-                <ul>
-                    <li><a href="index.html">Livhast.</a></li>
-                    <li class="hideOnMobile"><a href="#">New Movie</a></li>
-                    <li class="hideOnMobile"><a href="#">FM-Waves</a></li>
-                    <li class="hideOnMobile"><a href="#">TV-Series</a></li>
-                    <li class="hideOnMobile"><a href="#">Blog</a></li>
-                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" fill="rgb(245, 245, 220)"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-                </ul>
-                    <div class="auth-buttons">
-                        <button class="login-btn">Login</button>
-                        <button class="signup-btn">Signup</button>
-                    </div>
-            </nav>
-        </header>
-
-    
-    <main>
-        <div class="contain">
-        <section class="featured-movie">
-            <div class="movie-info">
-                <span class="badge">NEW</span>
-                <h1>Kraven the Hunter </h1>
-                <div class="rating">
-                    <span>IMDB</span>
-                    <span>8.2 (12,827)</span>
-                </div>
-                <p class="description">
-                    Action/Sci-fi | 2024 | 1 hour 55 minutes
-                    <br>Some brief description goes here...
-                </p>
-                <button>Watch trailer</button>
-                <button>Watch now</button>
-            </div>
-            <video id="kraven-video" class="hover-video" >
-                <source src="Assets/trailer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-        
-        <section class="movie-carousel-container">
-            <h2 class="bp">Best Picks</h2>
-            <button class="prev">&lt;</button> <div class="movie-carousel">
-                <img src="Assets/Rectangle 6.png" alt="Movie 1">
-                <img src="Assets/pos5.jpg" alt="Movie 2">
-                <img src="Assets/pos1.jpg" alt="Movie 3">
-                <img src="Assets/pos2.jpg" alt="Movie 4">
-                <img src="Assets/pos3.jpg" alt="Movie 5">
-                <img src="Assets/pos6.jpg" alt="Movie 6">
-                </div>
-            <button class="next">&gt;</button> </section>
-            <section class="movie-carousel-container">
-                <h2 class="bp">Top Rated</h2>
-                <button class="prev1">&lt;</button> <div class="movie-carousel1">
-                    <img src="Assets/Rectangle 6.png" alt="Movie 1">
-                    <img src="Assets/pos5.jpg" alt="Movie 2">
-                    <img src="Assets/pos1.jpg" alt="Movie 3">
-                    <img src="Assets/pos2.jpg" alt="Movie 4">
-                    <img src="Assets/pos3.jpg" alt="Movie 5">
-                    <img src="Assets/pos6.jpg" alt="Movie 6">
-                    </div>
-                <button class="next1">&gt;</button> </section>
-                </div>
-    </main> 
-    
-    <script src="script.js"></script>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>We bring the latest movies and TV series to you. Stay tuned for more updates!</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Series</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="Assets/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="Assets/twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="Assets/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="Assets/youtube.png" alt="YouTube"></a>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Livhast.</div>
+        <div class="container1">
+            <div class="headercon">
+                <h1>Unlimited movies, TV shows and more</h1>
+                <p>Watch anywhere. Cancel anytime.</p>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="email-form">
+                    <input type="email" placeholder="Email address">
+                    <a href="/Homepage/home.html">
+                    <button>Get Started ></button></a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Livhast. All rights reserved.</p>
+    </header>
+
+    <!-- Trending Now Section -->
+    <section class="trending-now">
+        <div class="container">
+            <h2>Trending Now</h2>
+            <div class="movie-carousel">
+                <!-- Movie cards -->
+                <div class="movie-card">
+                    <img src="/Front-page/pos1.jpg" alt="Movie 1">
+                    <span class="movie-title">Movie Title 1</span>
+                </div>
+                <div class="movie-card">
+                    <img src="/Front-page/pos2.jpg" alt="Movie 2">
+                    <span class="movie-title">Movie Title 2</span>
+                </div>
+                <div class="movie-card">
+                    <img src="/Front-page/pos3.jpg" alt="Movie 3">
+                    <span class="movie-title">Movie Title 3</span>
+                </div>
+                <!-- Repeat for more movies -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons to Join Section -->
+    <section class="reasons-to-join">
+        <div class="container">
+            <h2>More reasons to join</h2>
+            <div class="reasons">
+                <div class="reason">
+                    <h3>Enjoy on your TV</h3>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <div class="reason">
+                    <h3>Download your shows to watch offline</h3>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                </div>
+                <div class="reason">
+                    <h3>Watch everywhere</h3>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">What is this service?</button>
+                <div class="faq-answer">This service offers unlimited movies, TV shows, and more.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How much does it cost?</button>
+                <div class="faq-answer">You can watch for as low as $9.99 a month.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Where can I watch?</button>
+                <div class="faq-answer">You can watch on any internet-connected device, like a TV, smartphone, tablet, or computer.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>Questions? Call 000-000-0000</p>
+            <div class="footer-links">
+                <a href="#">FAQ</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+                <a href="#">Legal Notices</a>
+                <!-- Repeat for more links -->
+            </div>
         </div>
     </footer>
-    </div>
-    </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

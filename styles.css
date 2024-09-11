@@ -1,609 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+h1, h2, h3, p, button, input {
+    font-family: Arial, sans-serif;
+}
+
 body {
-    min-height: 100vh;
-    background-image: url(Assets/bg.jpg);
+    background-image: url('/Front-page/bg.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0; /* Ensure no margin on the body */
 }
 
-header {
-    color: #f0f0f0;
-    background-color: #0000007b;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Container class for consistent width */
+.container {
+    width: 90%;
+    margin: 0 auto; /* Center container horizontally */
+    padding: 0; /* Remove padding for consistent width */
 }
 
-
-
-
-/* nav{
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  }
-  nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-family: "Gruppo", sans-serif;
-    font-size: 22px;
-    font-weight: 200px;
-  }
-  nav li{
-    height: 50px;
-  }
-  nav a{
-    height: 100%;
-    padding: 0 50px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: rgb(255, 255, 255);
-  }
-  nav a:hover{
-    border: 2px solid rgb(255, 221, 0);
-    box-shadow:rgb(255, 221, 0); 
-    padding: 10px;
-    border-radius: 100px;
-  }
-  nav li:first-child{
-    margin-right: auto;
-  } */
- 
-  .sidebar{
-    position: fixed;
-    top: 0; 
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    z-index: 100;
-  }
-  .sidebar li{
-    
-    margin-left: 30px;
-    width: 100%;
-  }
-  .sidebar a{
-    width: 100%;
-  }
-  .menu-button{
-    display: none;
-  }
-  @media(max-width: 800px){
-    .hideOnMobile{
-      display: none;
-    }
-    .menu-button{
-      display: block;
-    }
-  }
-  @media(max-width: 400px){
-    .sidebar{
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  @media(max-width: 425px){
-    .menu-button{
-        margin-right: auto;
-    }
-  }
-nav {
-    display: flex;
-    align-items: center;
-    margin-left: 50px
-}
-
-nav ul {
-    display: flex;
-    gap: 90px;
-    list-style: none;
-    font-family: "Gruppo", sans-serif;
-    font-size: 22px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-
-nav a:hover {
-    padding-bottom: 5px;
-    border-radius: 5px;
-    border-bottom: 3px solid #ffd900;
-  } 
-
-
-nav ul {
-    display: flex;
-    gap: 90px;
-    list-style: none;
-    font-family: "Gruppo", sans-serif;
-    font-size: 22px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-
-nav a:hover {
-    padding-bottom: 5px;
-    border-radius: 5px;
-    border-bottom: 3px solid #ffd900;
-  } 
-
-  nav li:first-child{
-    margin-right: 400px;
-  }
-
-/* .search {
-    margin-left: 100px; 
-}
-
-.search input {
-    width: 300px;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-} */
-
-  .auth-buttons {
-    margin-left: 350px; /* Adjust the right value as needed */
-}
-.auth-buttons {
-    /* ... other styles ... */
-    transition: transform 0.2s ease-in-out;
-}
-
-.auth-buttons:hover {
-    transform: scale(1.1);
-}
-
-.login-btn:hover {
-    transform: scale(1.1);
-    background-color: #444;
-}
-
-.signup-btn:hover {
-    transform: rotate(10deg);
-    background-color: #666;
-}
-
-@media(max-width: 800px){
-    .auth-buttons{
-      display: none;
-    }
-  }
-
-.featured-movie {
-    position: relative;
-    padding: 50px;
-    background-image: url("Assets/kraven-the-hunter-3840x2160-18281.jpeg");
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    display: flex;
-    align-items: center;
-}
-
-.hover-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    display: none; /* Hide video initially */
-}
-
-.movie-info {
-    z-index: 2;
-    max-width: 400px;
+/* Header Section */
+.header {
     color: white;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    font-style: normal;
-}
+    text-align: center;
+    padding: 100px 20px;
+    }
 
-
-.badge {
-    display: inline-block;
-    background-color: yellow;
-    color: black;
-    padding: 5px 10px;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-.rating {
-    margin: 10px 0;
-}
-
-.description {
+    .headercon{
+        margin-top: 200px;
+        
+    }
+.header h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    line-height: 1.5;
 }
- 
-    button {
-        background-color: #f1c40f;
-        color: #333;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-right: 10px;
-    }
-    
-    .bp{
-        color:#ffd900   ;
-        font-family: "Ubuntu", sans-serif;
-        margin-bottom: 400px;
-        font-size: 29px;
-        margin-right: 100px;
-    }
-    
-    
-    .movie-carousel-container {
-        background: rgba(0, 0, 0, 0.58);
-        box-shadow: 0 8px 32px 0 rgba(246, 251, 146, 0.09);
-        backdrop-filter: blur( 12px );
-        -webkit-backdrop-filter: blur( 12px );
-        border-radius: 10px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-    }
-    
-    .movie-carousel {
-        display: flex;
-        overflow-x: hidden;
-        gap: 90px;
-        scroll-behavior: smooth;
-        padding: 20px;
-        padding-top: 10px;
-        scrollbar-width: none; /* For Firefox */
-        width: 80%;
-        transition: transform 0.3s ease-in-out; /* Animation effect */
-    }
-    
-    .movie-carousel::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Opera */
-    }
-    
-    .movie-carousel img {
-        width: 230px; /* Increased image size */
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
-    }
-    
-    
-    
-    /* Animation on hover */
-    .movie-carousel img:hover {
-        transform: scale(1.2); /* Zoom effect */
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
-    }
-    
-    /* FOR NEXT SCROLL*/
-    
-    .movie-carousel1 {
-        display: flex;
-        overflow-x: hidden;
-        gap: 90px;
-        scroll-behavior: smooth;
-        padding: 20px;
-        padding-top: 10px;
-        scrollbar-width: none; /* For Firefox */
-        width: 80%;
-        transition: transform 0.3s ease-in-out; /* Animation effect */
-    }
-    
-    .movie-carousel1::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Opera */
-    }
-    
-    .movie-carousel1 img {
-        width: 230px; /* Increased image size */
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
-    }
-    
-    
-    /* Animation on hover */
-    .movie-carousel1 img:hover {
-        transform: scale(1.2); /* Zoom effect */
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
-    }
-    
-    /* Scroll Button Styles */
-    button.prev, button.next, button.prev1, button.next1 {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-    }
-    
-    button.prev {
-        left: 10px;
-    }
-    
-    button.next {
-        right: 10px;
-    }
-    
-    button.prev1 {
-        left: 10px;
-    }
-    
-    button.next1 {
-        right: 10px;
-    }
-    
-    /* Hover Animation */
-    button.prev:hover, button.next:hover, button.prev1:hover, button.next1:hover {
-        background-color: rgba(242, 255, 0, 0.875); /* Change background color */
-        color: black; /* Change text color */
-        transform: translateY(-50%) scale(1.1); /* Slightly increase size */
-        box-shadow: 0 0 15px rgba(255, 225, 0, 0.89); /* Add shadow */
-    }
-    
 
-.movie-carousel-container {
-    background: rgba(0, 0, 0, 0.58);
-    box-shadow: 0 8px 32px 0 rgba(246, 251, 146, 0.09);
-    backdrop-filter: blur( 12px );
-    -webkit-backdrop-filter: blur( 12px );
-    border-radius: 10px;
-    position: relative;
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.email-form {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 30px;
+    margin: 0 auto; /* Center the form */
+    width: 100%;
+    max-width: 600px;
+}
+
+.email-form input {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    font-size: 1em;
+}
+
+.email-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e50914;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Trending Now Section */
+.trending-now {
+    padding: 50px 0;
+    background-color: #000;
+    color: white;
+}
+
+.trending-now h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
 .movie-carousel {
     display: flex;
-    overflow-x: hidden;
-    gap: 90px;
-    scroll-behavior: smooth;
-    padding: 20px;
-    padding-top: 10px;
-    scrollbar-width: none; /* For Firefox */
-    width: 80%;
-    transition: transform 0.3s ease-in-out; /* Animation effect */
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0 20px; /* Adjust padding for spacing */
 }
 
-.movie-carousel::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+.movie-card {
+    flex: 0 0 auto;
+    width: 200px;
 }
 
-.movie-carousel img {
-    width: 230px; /* Increased image size */
-    height: auto;
+.movie-card img {
+    width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
 }
 
-
-
-/* Animation on hover */
-.movie-carousel img:hover {
-    transform: scale(1.2); /* Zoom effect */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
+.movie-title {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-/* FOR NEXT SCROLL*/
-
-.movie-carousel1 {
-    display: flex;
-    overflow-x: hidden;
-    gap: 90px;
-    scroll-behavior: smooth;
-    padding: 20px;
-    padding-top: 10px;
-    scrollbar-width: none; /* For Firefox */
-    width: 80%;
-    transition: transform 0.3s ease-in-out; /* Animation effect */
+/* Reasons to Join Section */
+.reasons-to-join {
+    padding: 50px 0;
+    background-color: #f3f3f3;
+    color: #333;
 }
 
-.movie-carousel1::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
-}
-
-.movie-carousel1 img {
-    width: 230px; /* Increased image size */
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
-}
-
-
-/* Animation on hover */
-.movie-carousel1 img:hover {
-    transform: scale(1.2); /* Zoom effect */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
-}
-
-/* Scroll Button Styles */
-button.prev, button.next, button.prev1, button.next1 {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-}
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
-}
-
-button.prev1 {
-    left: 10px;
-}
-
-button.next1 {
-    right: 10px;
-}
-
-/* Hover Animation */
-button.prev:hover, button.next:hover, button.prev1:hover, button.next1:hover {
-    background-color: rgba(242, 255, 0, 0.875); /* Change background color */
-    color: black; /* Change text color */
-    transform: translateY(-50%) scale(1.1); /* Slightly increase size */
-    box-shadow: 0 0 15px rgba(255, 225, 0, 0.89); /* Add shadow */
-}
-
-
-/* Footer Styles */
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 40px 20px;
-    font-family: "Ubuntu", sans-serif;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 20px;
-}
-
-.footer-section h3 {
+.reasons-to-join h2 {
+    font-size: 1.8em;
     margin-bottom: 20px;
-    font-size: 22px;
-    color: #ffd900;
 }
 
-.footer-section p {
-    font-size: 16px;
-    line-height: 1.6;
+.reasons {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px; /* Adjust padding for consistent spacing */
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
+.reason {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.footer-section ul li {
+/* FAQ Section */
+.faq {
+    padding: 50px 0;
+    background-color: #333;
+    color: white;
+}
+
+.faq h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.faq-item {
     margin-bottom: 10px;
 }
 
-.footer-section ul li a {
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #444;
     color: white;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.footer-section ul li a:hover {
-    color: #ffd900;
+.faq-answer {
+    background-color: #555;
+    padding: 15px;
+    display: none;
+    border-radius: 5px;
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icons a img:hover {
-    transform: scale(1.2);
-}
-
-.footer-bottom {
+/* Footer Section */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 50px 0;
     text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 20px;
 }
 
-.footer-bottom p {
-    font-size: 14px;
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #999;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 /* For Webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 10px;
-     /* Width of the scrollbar */
     background-color: #000000;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000000; /* Track background */
-    border-radius: 10px; /* Rounded corners for the track */
+    background: #000000;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #555; /* Scrollbar handle color */
-    border-radius: 10px; /* Rounded corners for the handle */
+    background: #555;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #fff200; /* Scrollbar handle color on hover */
+    background: #fff200;
 }
 
 /* For Firefox */
 .scroll-container {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: #888 #fff200; /* Scrollbar handle color and track color */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #fff200;
 }
 
-/* For other browsers, use default styles or fallbacks */
+/* Header for the logo */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    position: fixed; /* Keeps it fixed on scroll */
+    width: 100%;
+    top: 0; /* Sticks to the top of the page */
+    z-index: 10; /* Stays above other elements */
+}
+
+/* Logo styles */
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914de; /* Red Netflix-style color */
+    margin-top: -80px;
+    margin-right: auto; /* Pushes the logo to the left */
+    text-align: left; /* Aligns text to the left */
+}
+
