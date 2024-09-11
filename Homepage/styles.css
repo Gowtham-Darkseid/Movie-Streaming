@@ -612,3 +612,112 @@ footer {
 /* Styles for Pop-up Window */
 /* Hide popup initially */
 /* Initial hidden state */
+
+@media (max-width: 580px) {
+
+    /* Adjust body background size */
+    body {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+    /* Resize the header padding and adjust flexbox */
+    header {
+      padding: 10px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* Adjust nav layout */
+    nav ul {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    nav li:first-child {
+      margin-right: 0;
+    }
+  
+    /* Adjust sidebar */
+    .sidebar {
+        
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Make buttons smaller */
+    button.prev, button.next, button.prev1, button.next1 {
+      font-size: 16px;
+      padding: 5px;
+    }
+  
+    /* Adjust movie-carousel for smaller screens */
+    .movie-carousel img, .movie-carousel1 img {
+      width: 200px; /* Smaller size */
+    }
+  
+    /* Adjust movie info and buttons */
+    .movie-info {
+      font-size: 18px;
+    }
+  
+    .auth-buttons {
+      margin-left: 20px;
+    }
+  
+    .featured-movie {
+      padding: 20px;
+      height: 500px;
+    }
+  
+    /* Footer adjustments */
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin: 10px 0;
+      min-width: 100%;
+    }
+  
+    .social-icons a img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    header {
+        padding: 15px 10px; /* Adjust padding to ensure elements are not too close to the edges */
+        justify-content: space-between; /* Ensures elements stay on opposite ends */
+        align-items: center; /* Centers elements vertically */
+    }
+
+    header .logo {
+        font-size: 20px; /* Slightly reduce the size for smaller screens */
+    }
+
+    header .menu-bar {
+        font-size: 24px; /* Ensures visibility of menu icon */
+    }
+}
+
+@media (max-width: 580px) {
+    header {
+      display: flex;
+      justify-content: space-between; /* Ensures that items are placed at the start and end of the header */
+      align-items: center; /* Aligns items vertically in the center */
+      padding: 10px; /* Adds padding to give some space around the contents */
+    }
+  
+    .logo, .menu-bar {
+      flex: 1; /* Allows both the logo and the menu bar to take up equal space in the header */
+      text-align: center; /* Centers the content of both logo and menu bar */
+    }
+  
+    .menu-bar {
+      text-align: right; /* Aligns the menu bar to the right */
+    }
+  }
+  
