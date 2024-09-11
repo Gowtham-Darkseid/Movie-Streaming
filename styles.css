@@ -1,4 +1,5 @@
 /* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -26,14 +27,15 @@ body {
 
 /* Header Section */
 .header {
+    background-image: url(/Front-page/wave1.svg);
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
     }
 
     .headercon{
-        margin-top: 200px;
-        
+        margin-top: 180px;
     }
 .header h1 {
     font-size: 2.5em;
@@ -74,33 +76,61 @@ body {
 /* Trending Now Section */
 .trending-now {
     padding: 50px 0;
-    background-color: #000;
+    background: rgba(0, 0, 0, 0.789);
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
     color: white;
 }
 
 .trending-now h2 {
+    color:#fff200;
+    margin-top: 0px;
     font-size: 1.8em;
     margin-bottom: 20px;
 }
 
 .movie-carousel {
     display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 0 20px; /* Adjust padding for spacing */
+    overflow:hidden;
+    white-space: nowrap;
+    gap: 50px;
+    padding: 0 300px; /* Adjust padding for spacing */
 }
 
 .movie-card {
+    display: inline-block; /* To keep all images in one line */
+    animation: scroll 15s linear infinite; 
     flex: 0 0 auto;
-    width: 200px;
+    width: 300px;
+    overflow: hidden;
+    height: auto;
 }
 
 .movie-card img {
+    margin-top: 20px;
+    margin-right: 10px; /* Spacing between images */
+  vertical-align: top; 
     width: 100%;
+    height: 70%;
     border-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+    transition: transform 0.5s ease;
 }
 
+.movie-card:hover img {
+    transform: scale(1.2); /* Zooms in the image */
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 .movie-title {
+    font-family: "SUSE", sans-serif;
     display: block;
     text-align: center;
     margin-top: 10px;
@@ -109,9 +139,13 @@ body {
 
 /* Reasons to Join Section */
 .reasons-to-join {
+    margin-top: -60px;
     padding: 50px 0;
-    background-color: #f3f3f3;
-    color: #333;
+    padding-bottom: 100px;
+    background: rgba( 0, 0, 0, 0.789 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    color: #ffffff;
 }
 
 .reasons-to-join h2 {
@@ -126,15 +160,32 @@ body {
 }
 
 .reason {
+    margin-top: 50px;
     flex: 1;
-    background-color: white;
-    padding: 20px;
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 121, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    padding: 50px;
     border-radius: 10px;
     text-align: center;
 }
 
+.reason h3 {
+    color: #fff200;
+    margin-bottom: 10px; /* Adds space below the heading */
+    font-weight: bold; /* Makes the heading bold */
+  }
+  
+  .reason p {
+    margin: 0; /* Removes any default margin */
+    font-size: 16px; /* Example font size */
+  }
+
 /* FAQ Section */
 .faq {
+    
     padding: 50px 0;
     background-color: #333;
     color: white;
@@ -143,6 +194,7 @@ body {
 .faq h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
+    color: #fff200  ;
 }
 
 .faq-item {
@@ -159,6 +211,7 @@ body {
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .faq-answer {
@@ -229,11 +282,49 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    color: #e50914de; /* Red Netflix-style color */
+    color:#fff200; /* Red Netflix-style color */
     margin-top: -80px;
     margin-right: auto; /* Pushes the logo to the left */
     text-align: left; /* Aligns text to the left */
 }
+
+.shiny-button {
+    margin-top: -100px;
+    margin-left: 90%;
+    position: relative;
+    padding: 10px 0px;
+    font-size: 16px;
+    color: white;
+    background-color: #00000020; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 100;
+  }
+  
+  .shiny-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.186);
+    transform: skewX(-15deg);
+    transition: none;
+  }
+  
+  .shiny-button:hover::before {
+    left: 100%;
+    transition: left 0.5s ease-in-out;
+  }
+  
+  .shiny-button:hover {
+    background-color: #ffffff00; /* Darken button on hover */
+  }
+  
 
 .footer-bottom {
     text-align: center;
@@ -244,4 +335,80 @@ body {
 
 .footer-bottom p {
     font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .reasons-to-join {
+      margin-top: -20px; /* Reduce the negative margin */
+      padding: 30px 10px; /* Adjust padding to fit smaller screens */
+      padding-bottom: 50px; /* Reduce the bottom padding */
+    }
+  
+    .reasons-to-join h2 {
+      font-size: 1.5em; /* Slightly smaller heading font size */
+      margin-bottom: 15px;
+    }
+  
+    .reasons {
+      display: block; /* Stack reasons vertically */
+      padding: 0; /* Remove extra padding */
+      gap: 10px; /* Reduce the gap between items */
+    }
+  
+    .reason {
+      margin-top: 20px; /* Reduce the margin */
+      padding: 30px; /* Adjust padding for better readability */
+      text-align: left; /* Left-align text for better legibility */
+    }
+  
+    .reason h3 {
+      font-size: 1.3em; /* Smaller font size for the heading */
+      margin-bottom: 8px;
+    }
+  
+    .reason p {
+      font-size: 14px; /* Smaller paragraph text */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trending-now {
+        padding: 20px 0; /* Reduce padding for smaller screens */
+        background: rgba(0, 0, 0, 0.8); /* Slightly less opaque for better readability on small screens */
+        backdrop-filter: blur(10px); /* Reduced blur for better performance */
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .trending-now h2 {
+        font-size: 1.4em; /* Smaller font size for smaller screens */
+        margin-bottom: 10px; /* Reduced bottom margin */
+    }
+
+    .movie-carousel {
+        padding: 0 20px; /* Reduce horizontal padding for better fit */
+    }
+
+    .movie-card {
+        width: 200px; /* Smaller width for better fit on small screens */
+    }
+
+    .movie-card img {
+        height: 60%; /* Adjust image height for better proportion */
+    }
+}
+
+  
+@media (max-width: 480px) {
+    .shiny-button {
+        margin-top: -100px; /* Adjust margin-top for better positioning */
+        margin-left: 70%; /* Adjust margin-left for better fit */
+        padding: 8px 0; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size for better fit */
+        border-radius: 4px; /* Slightly smaller border-radius */
+    }
+  
+    .shiny-button::before {
+        width: 40px; /* Smaller width for the shiny effect */
+    }
+
 }
