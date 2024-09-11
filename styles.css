@@ -235,3 +235,13 @@ body {
     text-align: left; /* Aligns text to the left */
 }
 
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
