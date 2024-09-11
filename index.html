@@ -8,6 +8,7 @@
     <link rel="icon" href="Front-page/52 (1).ico" type="image/x-icon">
 </head>
 <body>
+    <div class="custom-loader"></div>
     <!-- Header Section -->
     <header class="header">
         <div><h3 class="logo">Livhast.</h3>
@@ -132,7 +133,9 @@
             </div>
         </div>
     </footer>
-
+    <script>    window.addEventListener('load', function() {
+        document.querySelector('.custom-loader').style.display = 'none';
+    });</script>
     <script src="script.js"></script>
 </body>
 </html>

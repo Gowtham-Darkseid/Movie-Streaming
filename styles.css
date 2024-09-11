@@ -412,3 +412,35 @@ body {
     }
 
 }
+
+.custom-loader {
+    width: 70px;
+    height: 70px;
+    background:
+        radial-gradient(farthest-side, #4E73DF 90%, #0000) center/16px 16px,
+        radial-gradient(farthest-side, #6F6D91 90%, #0000) bottom/12px 12px;
+    background-repeat: no-repeat;
+    animation: s7 1s infinite linear;
+    position: relative;
+}
+
+.custom-loader::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    inset: auto 0 16px;
+    margin: auto;
+    background: #E4E4ED;
+    border-radius: 50%;
+    transform-origin: 50% calc(100% + 10px);
+    animation: inherit;
+    animation-duration: 0.5s;
+}
+
+
+@keyframes s7 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
