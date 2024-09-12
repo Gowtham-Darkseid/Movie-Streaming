@@ -240,7 +240,7 @@ footer {
 
 @media (max-width: 580px) {
     #video-player{
-        width:550px;
+        width:500px;
         height:350px;
 
     }
