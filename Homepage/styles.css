@@ -203,12 +203,18 @@ nav a:hover {
 .featured-movie {
     position: relative;
     padding: 50px;
-    background-image: url("Assets/kraven-the-hunter-3840x2160-18281.jpeg");
+    background-image: url("Assets/bg3.jpg");
     background-size: cover;
-    background-position: center;
     height: 700px;
     display: flex;
     align-items: center;
+}
+
+@media(max-width: 580px){
+    .featured-movie{
+       background-position-x: -100px;
+       background-repeat: no-repeat;
+    }
 }
 
 .hover-video {
@@ -224,7 +230,7 @@ nav a:hover {
 
 .movie-info {
     z-index: 2;
-    max-width: 400px;
+    max-width: 500px;
     color: white;
     font-family: "Ubuntu", sans-serif;
     font-size: 23px;
@@ -266,83 +272,6 @@ nav a:hover {
         margin-bottom: 400px;
         font-size: 29px;
         margin-right: 100px;
-    }
-    
-    
-    .movie-carousel-container {
-        background: rgba(0, 0, 0, 0.58);
-        box-shadow: 0 8px 32px 0 rgba(246, 251, 146, 0.09);
-        backdrop-filter: blur( 12px );
-        -webkit-backdrop-filter: blur( 12px );
-        border-radius: 10px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-    }
-    
-    .movie-carousel {
-        display: flex;
-        overflow-x: hidden;
-        gap: 90px;
-        scroll-behavior: smooth;
-        padding: 20px;
-        padding-top: 10px;
-        scrollbar-width: none; /* For Firefox */
-        width: 80%;
-        transition: transform 0.3s ease-in-out; /* Animation effect */
-    }
-    
-    .movie-carousel::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Opera */
-    }
-    
-    .movie-carousel img {
-        width: 230px; /* Increased image size */
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
-    }
-    
-    
-    
-    /* Animation on hover */
-    .movie-carousel img:hover {
-        transform: scale(1.2); /* Zoom effect */
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
-    }
-    
-    /* FOR NEXT SCROLL*/
-    
-    .movie-carousel1 {
-        display: flex;
-        overflow-x: hidden;
-        gap: 90px;
-        scroll-behavior: smooth;
-        padding: 20px;
-        padding-top: 10px;
-        scrollbar-width: none; /* For Firefox */
-        width: 80%;
-        transition: transform 0.3s ease-in-out; /* Animation effect */
-    }
-    
-    .movie-carousel1::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Opera */
-    }
-    
-    .movie-carousel1 img {
-        width: 230px; /* Increased image size */
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
-    }
-    
-    
-    /* Animation on hover */
-    .movie-carousel1 img:hover {
-        transform: scale(1.2); /* Zoom effect */
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Shadow effect */
     }
     
     /* Scroll Button Styles */
@@ -415,12 +344,21 @@ nav a:hover {
 }
 
 .movie-carousel img {
-    width: 230px; /* Increased image size */
+    width: 200px; /* Increased image size */
     height: auto;
     border-radius: 10px;
+    flex-shrink: 0;
     transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-30%); /* Scrolls the images horizontally */
+    }
+}
 
 
 /* Animation on hover */
@@ -448,7 +386,7 @@ nav a:hover {
 }
 
 .movie-carousel1 img {
-    width: 230px; /* Increased image size */
+    width: 200px; /* Increased image size */
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out; /* Animation effect for scaling */
